@@ -1,0 +1,47 @@
+.header {
+    padding: 0 auto;
+}
+
+.nav {
+    background-color: $color-base--black;
+    position: fixed;
+    width: 100%;
+    height: $header-height;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    @include media-q() {
+        height: $header-height-sm;
+    }
+
+    &__menu {
+        display: flex;
+        &__item {
+            border-radius: 8px;
+
+            &__link {
+                margin: 0 15px;
+                padding: 10px;
+                color: white;
+                align-items: center;
+                font-family: 'Open Sans';
+                font-weight: 600;
+                font-size: 18px;
+
+                @include media-q() {
+                    font-size: 12px;
+                }
+
+                &:hover {
+                    background-color: darken($color-base--black, 10);
+                    border-radius: 5px;
+                    align-items: center;
+                    font-family: 'Open Sans';
+
+                }
+            }
+        }
+    }
+}

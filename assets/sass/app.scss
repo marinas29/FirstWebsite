@@ -1,0 +1,13 @@
+//Fontes
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,600,600italic,700");
+
+@import "config/vars";
+@import "config/mixins";
+
+// Base and reset styles
+@import "base/base";
+
+// Modules
+@import "styles/modules/header";
+
+@import "styles/pages/home";

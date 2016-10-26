@@ -1,0 +1,6 @@
+
+@mixin media-q ($screen: sm) {
+    @media screen and (max-width: map-get($screens, $screen)) {
+        @content;
+    }
+}
