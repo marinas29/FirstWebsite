@@ -1,5 +1,6 @@
 //Fontes
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,600,600italic,700");
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css");
 
 @import "config/vars";
 @import "config/mixins";
@@ -8,7 +9,11 @@
 // Base and reset styles
 @import "base/base";
 
+@import "styles/components/button";
+
 // Modules
 @import "styles/modules/header";
 
-@import "styles/pages/home";
+@import "styles/pages/firstblock";
+@import "styles/pages/secondblock";
+@import "styles/pages/thirdblock";

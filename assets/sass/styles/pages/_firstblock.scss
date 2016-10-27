@@ -41,10 +41,6 @@
     }
 
     &__image {
-        /*@include media-q(xss) {
-            width: auto;
-            height: auto;
-        }*/
     }
 
     &__content {
@@ -64,10 +60,8 @@
         }
 
         &__h1 {
-            color: $color-base--black;
             margin-bottom: 40px;
             font-weight: lighter;
-            font-size: 55px;;
 
             @include media-q(md) {
                 margin-top: 35px;
@@ -83,14 +77,13 @@
 
         }
 
-        &__paragrafo {
+        &__paragraph {
             margin-bottom: 40px;
-            color: lighten($color-base--black, 40);
             font-size: 25px;
             font-weight: lighter;
             letter-spacing: 0.5px;
 
-            &--cor-escura{
+            &--dark-color {
                 color: $color-base--black;
             }
 
@@ -143,32 +136,15 @@
             }
         }
 
-        &__botao{
-            display: flex;
-            background: url("/images/bg.png");
-            background-color: $color-base--blue;
-            border-radius: 8px;
-            padding: 25px;
-            height: auto;
-            width: 400px;
+        &__button {
+            width: 360px;
+            padding: 10px;
             justify-content: center;
-            color: #fff;
-            letter-spacing: 0.8px;
-            font-weight: bold;
-            font-size: 25px;
-            text-shadow: -1px -1px 0.5px $color-base--black;
-            box-shadow: 0 0 1 0.5 $color-base--black;
-
-            &:hover{
-                background-color: lighten($color-base--blue, 5);
-            }
 
             @include media-q(md) {
-                width: auto;
-                margin-right: 20px;
+                width: 300px;
                 font-size: 20px;
                 height: 40px;
-                padding: 10px;
             }
 
             @include media-q() {
@@ -180,10 +156,8 @@
 
             @include media-q(xss) {
                 width: auto;
-                height: 50px;
                 font-size: 15px;
                 padding: 5px;
-                margin-left: 15px;
             }
         }
     }
