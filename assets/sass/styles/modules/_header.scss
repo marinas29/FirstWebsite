@@ -35,7 +35,7 @@
                 }
 
                 &:hover {
-                    background-color: darken($color-base--black, 10);
+                    background-color: lighten($color-base--black, 10);
                     border-radius: 5px;
                     align-items: center;
                     font-family: 'Open Sans';

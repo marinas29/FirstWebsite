@@ -1,7 +1,190 @@
 .first-block {
-    padding-top: $header-height;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    padding-left: 100px;
+    padding-right: 110px;
+    padding-bottom: 130px;
+    padding-top: $header-height + 150px;
+    text-align: justify;
+
+    @include media-q(md) {
+        padding-top: $header-height-sm + 100px;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-bottom: 80px;
+    }
 
     @include media-q() {
-        padding-top: $header-height-sm;
+        padding-top: $header-height-sm + 30px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    @include media-q(xs) {
+        padding-top: $header-height-sm + 30px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 20px;
+    }
+
+    @include media-q(xss) {
+        padding-top: $header-height-sm + 20px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-bottom: 10px;
+    }
+
+    &__image {
+        /*@include media-q(xss) {
+            width: auto;
+            height: auto;
+        }*/
+    }
+
+    &__content {
+        margin-left: 60px;
+        display: flex;
+        align-content: center;
+        flex-direction: column;
+        justify-content: center;
+        font-family: 'Open Sans';
+
+        @include media-q(md) {
+            margin-left: 30px;
+        }
+
+        @include media-q() {
+            margin-left: 0px;
+        }
+
+        &__h1 {
+            color: $color-base--black;
+            margin-bottom: 40px;
+            font-weight: lighter;
+            font-size: 55px;;
+
+            @include media-q(md) {
+                margin-top: 35px;
+                font-size: 35px;
+                margin-bottom: 25px;
+            }
+
+            @include media-q() {
+                margin-top: 30px;
+                font-size: 30px;
+                margin-bottom: 20px;
+            }
+
+        }
+
+        &__paragrafo {
+            margin-bottom: 40px;
+            color: lighten($color-base--black, 40);
+            font-size: 25px;
+            font-weight: lighter;
+            letter-spacing: 0.5px;
+
+            &--cor-escura{
+                color: $color-base--black;
+            }
+
+            &__link{
+                color: lighten($color-base--black, 40);
+                font-size: 25px;
+                font-weight: lighter;
+                letter-spacing: 0.8px;
+                text-decoration: underline;
+
+                &:hover{
+                    color: $color-base--blue;
+                }
+
+                @include media-q(md) {
+                    font-size: 20px;
+                    padding-right: 20px;
+                }
+
+                @include media-q() {
+                    font-size: 15px;
+                }
+
+                @include media-q(xss) {
+                    margin-bottom: 20px;
+                    font-size: 15px;
+                    text-align: center;
+                    letter-spacing: 0px;
+                    margin-left: 15px;
+                }
+            }
+
+            @include media-q(md) {
+                font-size: 20px;
+                margin-right: 20px;
+                margin-bottom: 30px;
+            }
+
+            @include media-q() {
+                margin-bottom: 20px;
+                font-size: 15px;
+            }
+
+            @include media-q(xss) {
+                margin-bottom: 20px;
+                font-size: 15px;
+                text-align: center;
+                letter-spacing: 0px;
+                margin-left: 15px;
+            }
+        }
+
+        &__botao{
+            display: flex;
+            background: url("/images/bg.png");
+            background-color: $color-base--blue;
+            border-radius: 8px;
+            padding: 25px;
+            height: auto;
+            width: 400px;
+            justify-content: center;
+            color: #fff;
+            letter-spacing: 0.8px;
+            font-weight: bold;
+            font-size: 25px;
+            text-shadow: -1px -1px 0.5px $color-base--black;
+            box-shadow: 0 0 1 0.5 $color-base--black;
+
+            &:hover{
+                background-color: lighten($color-base--blue, 5);
+            }
+
+            @include media-q(md) {
+                width: auto;
+                margin-right: 20px;
+                font-size: 20px;
+                height: 40px;
+                padding: 10px;
+            }
+
+            @include media-q() {
+                width: auto;
+                height: 50px;
+                font-size: 15px;
+                padding: 5px;
+            }
+
+            @include media-q(xss) {
+                width: auto;
+                height: 50px;
+                font-size: 15px;
+                padding: 5px;
+                margin-left: 15px;
+            }
+        }
     }
 }
