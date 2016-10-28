@@ -2,8 +2,8 @@
     display: flex;
     align-content: center;
     justify-content: space-between;
-    padding-left: 100px;
-    padding-right: 110px;
+    padding-left: 150px;
+    padding-right: 200px;
     padding-bottom: 130px;
     padding-top: $header-height + 150px;
     text-align: justify;
@@ -41,6 +41,24 @@
     }
 
     &__image {
+        width: 500px;
+
+        @include media-q(lg) {
+            width: 700px;
+        }
+
+        @include media-q() {
+            width: 450px;
+        }
+
+        @include media-q(xs) {
+            width: 300px;
+        }
+
+        @include media-q(xss) {
+            width: 200px;
+        }
+
     }
 
     &__content {
@@ -50,6 +68,7 @@
         flex-direction: column;
         justify-content: center;
         font-family: 'Open Sans';
+        width: max(1000px);
 
         @include media-q(md) {
             margin-left: 30px;
@@ -57,21 +76,39 @@
 
         @include media-q() {
             margin-left: 0px;
+            padding-left: 150px;
+            padding-right: 150px;
+        }
+
+        @include media-q(xs) {
+            margin-left: 0px;
+            padding-left: 300px;
+            padding-right: 300px;
         }
 
         &__h1 {
             margin-bottom: 40px;
             font-weight: lighter;
 
+            @include media-q(lg) {
+                margin-top: 45px;
+                font-size: 35px;
+            }
+
             @include media-q(md) {
                 margin-top: 35px;
-                font-size: 35px;
+                font-size: 25px;
                 margin-bottom: 25px;
             }
 
             @include media-q() {
                 margin-top: 30px;
                 font-size: 30px;
+                margin-bottom: 20px;
+            }
+
+            @include media-q(xs) {
+                font-size: 25px;
                 margin-bottom: 20px;
             }
 
@@ -98,9 +135,12 @@
                     color: $color-base--blue;
                 }
 
+                @include media-q(lg) {
+                    font-size: 25px;
+                }
+
                 @include media-q(md) {
                     font-size: 20px;
-                    padding-right: 20px;
                 }
 
                 @include media-q() {
@@ -112,8 +152,11 @@
                     font-size: 15px;
                     text-align: center;
                     letter-spacing: 0px;
-                    margin-left: 15px;
                 }
+            }
+
+            @include media-q(lg) {
+                font-size: 25px;
             }
 
             @include media-q(md) {
@@ -125,6 +168,17 @@
             @include media-q() {
                 margin-bottom: 20px;
                 font-size: 15px;
+                margin-left: 150px;
+                margin-right: 150px;
+            }
+
+            @include media-q(xs) {
+                margin-bottom: 20px;
+                font-size: 15px;
+                text-align: center;
+                letter-spacing: 0px;
+                margin-left: 50px;
+                margin-right: 50px;
             }
 
             @include media-q(xss) {
@@ -132,12 +186,15 @@
                 font-size: 15px;
                 text-align: center;
                 letter-spacing: 0px;
-                margin-left: 15px;
+                margin-left: 75px;
+                margin-right: 75px;
             }
         }
 
         &__button {
+            display: flex;
             width: 360px;
+            height: 100px;
             padding: 10px;
             justify-content: center;
 
@@ -148,16 +205,23 @@
             }
 
             @include media-q() {
-                width: auto;
+                align-items: center;
+                margin-left: 150px;
+                width: max(400px);
                 height: 50px;
                 font-size: 15px;
-                padding: 5px;
+            }
+
+            @include media-q(xs) {
+                width: max(250px);
+                margin-left: 75px;
+                font-size: 15px;
             }
 
             @include media-q(xss) {
-                width: auto;
+                width: max(200px);
+                margin-left: 100px;
                 font-size: 15px;
-                padding: 5px;
             }
         }
     }
