@@ -1,0 +1,375 @@
+.footer{
+    font-family: 'Open Sans';
+    background-color: lighten($color-base--black, 5);
+    text-align: center;
+
+    &__content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__name-email{
+            padding: 15px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+            @include media-q(md) {
+                display: flex;
+                flex-direction: column;
+                max-width: 100%;
+            }
+
+            @include media-q() {
+                padding: 0;
+            }
+
+            &--name{
+                padding: 15px;
+                width: 440px;
+                margin-right: 20px;
+
+                @include media-q(md) {
+                    margin-bottom: 10px;
+                    margin-right: 0px;
+                    width: 650px;
+                }
+
+                @include media-q() {
+                    margin-bottom: 10px;
+                    margin-right: 0px;
+                    width: 450px;
+                }
+
+                @include media-q(xs) {
+                    margin-bottom: 10px;
+                    margin-left: 10px;
+                    margin-right: 0px;
+                    width: 300px;
+                }
+
+                @include media-q(xss) {
+                    width: 200px;
+                }
+            }
+
+            &--email{
+                padding: 15px;
+                width: 440px;
+
+                @include media-q(md) {
+                    margin-bottom: 0px;
+                    width: 650px;
+                }
+
+                @include media-q() {
+                    margin-bottom: 10px;
+                    margin-right: 0px;
+                    width: 450px;
+                }
+
+                @include media-q(xs) {
+                    margin-bottom: 10px;
+                    margin-left: 10px;
+                    margin-right: 0px;
+                    width: 300px;
+                }
+
+                @include media-q(xss) {
+                    width: 200px;
+                }
+            }
+        }
+
+        &--subject{
+            padding: 15px;
+            width: 900px;
+            margin: 20px;
+
+            @include media-q(md) {
+                margin: 0;
+                margin-bottom: 10px;
+                width: 650px;
+            }
+
+            @include media-q() {
+                margin: 0;
+                margin-bottom: 10px;
+                margin-right: 0px;
+                width: 450px;
+            }
+
+            @include media-q(xs) {
+                margin-bottom: 10px;
+                margin-right: 0px;
+                width: 300px;
+            }
+
+            @include media-q(xss) {
+                width: 200px;
+            }
+        }
+
+        &--message{
+            padding: 15px;
+            width: 900px;
+            height: 200px;
+            text-color: $color-base--white;
+
+            @include media-q(md) {
+                margin-bottom: 120px;
+                width: 650px;
+            }
+
+            @include media-q() {
+                margin-bottom: 10px;
+                margin-right: 0px;
+                width: 450px;
+            }
+
+            @include media-q(xs) {
+                margin-bottom: 10px;
+                margin-left: 10px;
+                margin-right: 0px;
+                width: 300px;
+            }
+
+            @include media-q(xss) {
+                margin-left: 0px;
+                width: 200px;
+            }
+        }
+
+        &__button{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+            &--send{
+                margin: 30px;
+
+                @include media-q() {
+                    font-size: 15px;
+                    margin: 20px;
+                }
+
+            }
+
+            &--clear{
+                background-color: lighten($color-base--black, 5);
+                margin: 30px;
+
+                &:hover{
+                    background-color: lighten($color-base--black, 9);
+
+                    @include media-q() {
+                        font-size: 15px;
+                        margin: 20px;
+                    }
+                }
+
+                @include media-q() {
+                    font-size: 15px;
+                    margin: 20px;
+                }
+            }
+
+            @include media-q(xss) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 25px;
+                height: auto;
+                width: auto;
+                font-size: 25px;
+            }
+        }
+    }
+
+    &__h1{
+        padding-top: 100px;
+        color: $color-base--white;
+
+        &--l-color{
+            color: $color-base--white;
+            font-size: 25px;
+            padding-bottom: 20px;
+
+            @include media-q() {
+                font-size: 20px;
+            }
+
+            @include media-q(xs) {
+                font-size: 18px;
+            }
+
+            @include media-q(xss) {
+                font-size: 15px;
+            }
+        }
+
+        @include media-q() {
+            font-size: 25px;
+            padding-top: 60px;
+        }
+
+        @include media-q(xs) {
+            font-size: 18px;
+        }
+
+        @include media-q(xss) {
+            font-size: 15px;
+        }
+    }
+
+    &__paragraph{
+        padding-top: 10px;
+
+        @include media-q() {
+            font-size: 15px;
+            padding-bottom: 15px;
+            text-align: center;
+        }
+
+        @include media-q(xs) {
+            font-size: 12px;
+            padding-bottom: 15px;
+            text-align: center;
+        }
+
+        @include media-q(xs) {
+            font-size: 10px;
+            padding-bottom: 15px;
+            text-align: center;
+        }
+
+        @include media-q(xss) {
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+    }
+
+    &__social{
+        font-size: 30px;
+        text-align: center;
+        padding: 30px;
+        padding-bottom: 20px;
+
+        &__square{
+            margin: 5px;
+            width: 50px;
+            height: 50px;
+            padding: 7px;
+            border-radius: 8px;
+            background-color: lighten($color-base--black, 8);
+
+                &--twitter{
+                    &:hover{
+                        background-color: #2DAAE4;
+                    }
+
+                    @include media-q() {
+                        background-color: #2DAAE4;
+                    }
+                }
+
+                &--facebook{
+                    &:hover{
+                        background-color: #3C5A98;
+                    }
+                    @include media-q() {
+                        background-color: #3C5A98;
+                    }
+                }
+
+                &--dribbble{
+                    &:hover{
+                    background-color: #C4376B;
+                    }
+                    @include media-q() {
+                        background-color: #C4376B;
+                    }
+                }
+
+                &--linkedin{
+                    &:hover{
+                        background-color: #006599;
+                    }
+                    @include media-q() {
+                        background-color: #006599;
+                    }
+                }
+
+                &--tumblr{
+                    &:hover{
+                        background-color: #51718A;
+                    }
+                    @include media-q() {
+                        background-color: #51718A;
+                    }
+                }
+
+                &--gplus{
+                    &:hover{
+                        background-color: #DA2713;
+                    }
+                    @include media-q() {
+                        background-color: #DA2713;
+                    }
+                }
+
+                &--github{
+                    &:hover{
+                        background-color: $color-base--white;
+                    }
+                    @include media-q() {
+                        background-color: $color-base--white;
+                    }
+                }
+            }
+
+            &__line{
+
+                border: none;
+                background: lighten($color-base--black, 10);
+                height: 1px;
+                margin: 20px;
+                box-shadow:  0px 0px 1px;
+            }
+
+        }
+
+        &__credits{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            color: lighten($color-base--black, 20);
+            padding-bottom: 100px;
+
+            &--line1{
+            padding: 10px;
+            }
+
+            &--line2{
+            padding: 10px;
+            border-left: 1px solid lighten($color-base--black, 10);
+            }
+
+            &--line3{
+            padding: 10px;
+            border-left: 1px solid lighten($color-base--black, 10);
+            }
+
+            @include media-q(xss) {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding-bottom: 50px;
+            }
+
+        }
+
+
+}

@@ -32,3 +32,14 @@ h3 { font-size: 1.75rem; }  //24.5px
 h4 { font-size: 1.25rem;}   //17.5px
 h5 { font-size: 1rem; }     //14.0px
 h6 { font-size: 0.75rem; }  //10.5px
+
+
+input, textarea {
+    background-color: $color-base--black;
+    border-radius: 8px;
+    font-family: 'Open Sans';
+    color: white;
+    //height: 50px;
+    //width: 500px;
+    border-color: lighten($color-base--black, 10);
+}
