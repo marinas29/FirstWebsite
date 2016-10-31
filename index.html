@@ -6,6 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="stylesheet" href="dist/app.css">
+
+
     </head>
     <body>
         <div class="header">
@@ -145,6 +147,7 @@
             <div class="footer__content__name-email">
 
                 <input type="text" class="footer__content__name-email--name" name="" id="name" placeholder='Name' />
+                <span></span>
                 <input type="text" class="footer__content__name-email--email" name="" id="email" placeholder='Email'/>
 
             </div>
@@ -152,8 +155,8 @@
                 <textarea name="" class="footer__content--message" id="message" placeholder='Message'></textarea>
 
                 <div class="footer__content__button">
-                    <input type="submit" class="btn-default footer__content__button--send" value="Send Message" />
-                    <input type="reset" class="btn-default footer__content__button--clear" value="Clear Form" />
+                    <input type="submit" class="btn-default footer__content__button--send" value="Send Message" onclick="validate()"/>
+                    <input type="reset" class="btn-default footer__content__button--clear" value="Clear Form" onclick="clearForm()"/>
                 </div>
             </div>
 
@@ -184,5 +187,47 @@
 
         </div>
 
+        <script src="https://rawgit.com/skaterdav85/validatorjs/master/dist/validator.js"> </script>
+        <script>
+            function validate() {
+                var nameValue = document.querySelector('#name').value;
+                console.log(nameValue);
+
+                var emailValue = document.querySelector('#email').value;
+                console.log(emailValue);
+
+                var subjectValue = document.querySelector('#subject').value;
+                console.log(subjectValue);
+
+                var messageValue = document.querySelector('#message').value;
+                console.log(messageValue);
+
+                var data = {
+                    name: nameValue,
+                    email: emailValue,
+                    subject: subjectValue,
+                    message: messageValue
+                };
+
+                var rules = {
+                    name: 'required',
+                    email: 'required|email',
+                    subject: 'required',
+                    message: 'required'
+                };
+
+                var validation = new Validator(data, rules);
+                console.log(validation);
+
+                console.log(validation.passes());
+            }
+
+            function clearForm(){
+                document.querySelector('#name').value = '';
+                document.querySelector('#email').value = '';
+                document.querySelector('#subject').value = '';
+                document.querySelector('#message').value = '';
+            }
+        </script>
     </body>
 </html>
